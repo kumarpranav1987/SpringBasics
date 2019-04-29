@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:context="http://www.springframework.org/schema/context"
@@ -7,10 +8,8 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<!-- <import resource="helloworld_setter_injection.xml"/> -->
-	
-	<!-- <import resource="helloworld_constructor_injection.xml"/> -->
-	
-	<import resource="helloworld_scope.xml"/>
-	
+	<bean id="helloWorld" class="com.livetechstudy.spring.dependency.injection.HelloWorld">
+		<constructor-arg value="Hello World!"></constructor-arg>
+		<!-- <constructor-arg value="Hello World!" type="String" index="0"></constructor-arg> -->
+	</bean>
 </beans>

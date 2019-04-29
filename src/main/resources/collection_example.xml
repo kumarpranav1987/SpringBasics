@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="collectionExample"
+		class="com.livetechstudy.spring.dependency.injection.CollectionExample">
+		<property name="countryList">
+			<list>
+				<value>USA</value>
+				<value>India</value>
+				<value>Japan</value>
+				<value>USA</value>
+			</list>
+		</property>
+
+		<property name="countrySet">
+			<set>
+				<value>USA</value>
+				<value>India</value>
+				<value>Japan</value>
+				<value>USA</value>
+			</set>
+		</property>
+
+		<property name="countryMap">
+			<map>
+				<entry key="1" value="USA"></entry>
+				<entry key="2" value="India"></entry>
+				<entry key="3" value="Japan"></entry>
+				<entry key="4" value="USA"></entry>
+			</map>
+		</property>
+	</bean>
+</beans>
