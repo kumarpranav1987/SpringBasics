@@ -1,4 +1,4 @@
-package com.livetechstudy.spring.aop;
+package com.livetechstudy.spring.aop.annotation;
 
 public class Calculator {
 	

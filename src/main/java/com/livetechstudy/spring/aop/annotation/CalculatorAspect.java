@@ -1,4 +1,4 @@
-package com.livetechstudy.spring.aop;
+package com.livetechstudy.spring.aop.annotation;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -8,6 +8,7 @@ import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 
 /**
@@ -22,11 +23,13 @@ public class CalculatorAspect {
 
 	//argument joint point is not necessary
 	@Before("execution(public int add(..))")
+	//@Before("addPointCut()")
 	public void before(JoinPoint joinPoint) {
 		System.out.println("Entering in Method : "+joinPoint.getSignature().getName());
 	}
 	
 	@AfterReturning("execution(public int add(..))")
+	//@AfterReturning("addPointCut()")
 	public void afterReturning(JoinPoint joinPoint) {
 		System.out.println("Returning From Method : "+joinPoint.getSignature().getName());
 	}
@@ -50,5 +53,8 @@ public class CalculatorAspect {
 		return (Integer)returnValue;
 	}
 	
-	
+	@Pointcut("execution(public int add(..))")
+	public void addPointCut() {
+		
+	}
 }
