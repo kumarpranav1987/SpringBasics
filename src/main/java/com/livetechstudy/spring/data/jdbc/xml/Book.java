@@ -1,4 +1,5 @@
-package com.livetechstudy.spring.data.jdbc.annotation;
+package com.livetechstudy.spring.data.jdbc.xml;
+
 
 public class Book {
 	private String bookId;
