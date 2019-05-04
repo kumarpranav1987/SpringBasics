@@ -1,4 +1,4 @@
-package com.livetechstudy.spring.data.jpa;
+package com.livetechstudy.spring.data.jpa.annotation;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
